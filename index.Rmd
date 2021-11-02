@@ -1,7 +1,15 @@
 ---
-title: "p8105_hw4_lcp2148"
-output: html_document
+title: "HW 4 Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
 ---
+
+### Introduction
+
+You're on the landing page for my website made for HW 4 of Data Science. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
