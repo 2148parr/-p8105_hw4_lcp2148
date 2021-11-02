@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
 ---
 
 ## Introduction
@@ -19,11 +18,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Want to see my resume?](resume.html)
 
-## My contact information
 
-- [My GitHub account](https://github.com/2148parr)
-- [My out-of-date Linkedin](https://www.linkedin.com/in/alfie-p-089274bb/)
-- My email
+
+
 
 
 
