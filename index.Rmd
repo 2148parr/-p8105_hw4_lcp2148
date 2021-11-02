@@ -10,14 +10,6 @@ output:
 
 You're on the landing page for my website made for HW 4 of Data Science. 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## My resume 
-
-[Want to see my resume?](resume.html)
-
 
 
 
