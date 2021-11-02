@@ -4,10 +4,10 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
+    theme: cosmo
 ---
 
-### Introduction
+## Introduction
 
 You're on the landing page for my website made for HW 4 of Data Science. 
 
@@ -15,22 +15,16 @@ You're on the landing page for my website made for HW 4 of Data Science.
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## My resume 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+[Want to see my resume?](resume.html)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## My contact information
 
-```{r cars}
+- [My GitHub account](https://github.com/2148parr)
+- [My out-of-date Linkedin](https://www.linkedin.com/in/alfie-p-089274bb/)
+- My email
 
-```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

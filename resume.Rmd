@@ -1,0 +1,10 @@
+---
+title: "resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+---
+
+# This page has my academic and professional experience
