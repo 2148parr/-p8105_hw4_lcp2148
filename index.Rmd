@@ -12,7 +12,6 @@ I've included some important .jpegs of my doggies for your consideration.
 
 ## Thor 
 <img src="website_images/thor_nyan.jpeg" style="width:75%">
-<img src="website_images/thor.jpeg" style="width:75%">
 <img src="website_images/weird_horse.jpeg" style="width:75%">
 <img src="website_images/thor_paws.jpeg" style="width:75%">
 <img src="website_images/thor_begging.jpeg" style="width:75%">
