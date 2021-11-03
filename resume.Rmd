@@ -9,40 +9,40 @@ output:
 This page has my academic and professional experience.
 
 ## Education	
-| Columbia University Mailman School of Public Health, New York, NY
-| Master of Public Health, Epidemiology with Certificate in Advanced Epidemiology, Expected May 2022 
+| **Columbia University Mailman School of Public Health,** New York, NY
+| *Master of Public Health,* Epidemiology with Certificate in Advanced Epidemiology, Expected May 2022 
 |     GPA: 3.99 
 |     Relevant Coursework: Analysis of Categorical Data, Application of Epidemiologic 
 |     Research Methods, Data Science, Applied Regression I, Emerging Infectious Diseases, 
 |     Public Health Interventions, Design and Conduct of Observational Epidemiology, 
 |     Applied Epidemiologic Analysis
 |
-| Oberlin College, Oberlin, OH 
-| Bachelor of Arts, Sociology, May 2020 
+| **Oberlin College,** Oberlin, OH 
+| *Bachelor of Arts,* Sociology, May 2020 
 |     GPA: 3.48 
 |     Relevant Coursework: Feminist Epidemiology; Statistics; Social Research Methods
 |     Activities: Orchestra; Lambda Union; Trans Advocacy Group: Lilac; Figure Drawing Club
 
 ## Experience
-Columbia University, New York, NY
-Research Intern, June 2021 – August 2021
+**Columbia University,** New York, NY
+*Research Intern,* June 2021 – August 2021
 Alongside faculty mentor, perform literature review, conceptualize analysis, clean data and perform analyses with SAS and Stata, and draft manuscript regarding the association of social isolation and falls in older US adults during COVID-19 using National Health and Aging Trends Study data. 
 
-Oberlin College, Oberlin, OH
-Drawing Teaching Assistant, October 2018 – March 2020
+**Oberlin College,** Oberlin, OH
+*Drawing Teaching Assistant,* October 2018 – March 2020
 In coordination with Oberlin's art department, make promotional material for and administer figure drawing sessions: set up the space, communicate with attendees, direct models, time poses, and clean up post-session.
 
-Oberlin College, Oberlin, OH
-Main Library Circulation Stacks Assistant, May 2018 – August 2018
+**Oberlin College,** Oberlin, OH
+*Main Library Circulation Stacks Assistant,* May 2018 – August 2018
 Sort and reshelve library materials, retrieve and package materials for interlibrary loan, repair mildly-damaged books, and retrieve and transport materials from the Archives to the Main Library. 
 
-T-Time Productions, Providence, RI
-Freelance Storyboard Artist, July 2017 – August 2017 
+**T-Time Productions,** Providence, RI
+*Freelance Storyboard Artist,* July 2017 – August 2017 
 Communicate with team members and supervisor, draw storyboards, character designs, and backgrounds for educational animations.
 
 ## Interests and skills
 Social Epidemiology, Microsoft Office, SAS, Stata, RStudio (Fall 2021), basic Mplus
 
-Professional Training, Epi Summer @ Columbia, Summer 2021: What can we learn from the HIV response about pandemic preparedness for SARS-CoV-2 and beyond, Modeling change over time
-Positive Aspects of Caregiving Team, September 2021: Longitudinal Training Sessions; Introduction to Mplus modeling, data preparation, and LME, MLM, and LGC interpretation 
+| Professional Training, *Epi Summer @ Columbia,* Summer 2021: What can we learn from the HIV response about pandemic preparedness for SARS-CoV-2 and beyond, Modeling change over time
+| *Positive Aspects of Caregiving Team,* September 2021: Longitudinal Training Sessions; Introduction to Mplus modeling, data preparation, and LME, MLM, and LGC interpretation 
 

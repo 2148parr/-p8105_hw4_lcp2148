@@ -21,12 +21,9 @@ I am loading in my instacart data, which will be used to make a flexdashboard of
 data("instacart")
 ```
 
-## Including Plots
+## 
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
+```{r plot}
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

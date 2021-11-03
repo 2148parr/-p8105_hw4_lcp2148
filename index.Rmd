@@ -24,7 +24,7 @@ I've included some important .jpegs of my doggies for your consideration.
 ## Gracie 
 
 <img src="website_images/gracie_contemplative.jpeg" style="width:75%">
-<img src="website_images/gracie_lick.jpeg" style="width:75%">
+<img src="website_images/gracie_lick.png" style="width:75%">
 <img src="website_images/gracie_omg.jpeg" style="width:75%">
 <img src="website_images/gracie_snoot.jpeg" style="width:75%">
 <img src="website_images/gracie_waiting.jpeg" style="width:75%">
