@@ -1,0 +1,32 @@
+---
+title: "flexdash"
+output:   
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+```{r setup, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+## Loading in data
+
+I am loading in my instacart data, which will be used to make a flexdashboard of various visualizations of the data. 
+
+```{r insta, message = FALSE}
+data("instacart")
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
