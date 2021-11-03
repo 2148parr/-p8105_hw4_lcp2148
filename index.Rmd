@@ -42,7 +42,7 @@ I've included some important .jpegs of my doggies for your consideration.
 <img src="website_images/gracie_ladybug_look.jpeg" style="width:75%">
 <img src="website_images/gracie_ladybug_cute.jpeg" style="width:75%">
 <img src="website_images/gracie_ladybug_important.jpeg" style="width:75%">
-<img src="website_images/grac_ie_ladybug_lad_gouache.jpeg" style="width:75%">
+<img src="website_images/grac_lad_gouache.jpeg" style="width:75%">
 
 ## Sadie (RIP)
 
