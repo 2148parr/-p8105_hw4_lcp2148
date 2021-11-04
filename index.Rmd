@@ -13,42 +13,30 @@ I've included some important .jpegs of my doggies for your consideration.
 ## Thor 
 <img src="website_images/thor_nyan.jpeg" style="width:75%">
 <img src="website_images/weird_horse.jpeg" style="width:75%">
-<img src="website_images/thor_paws.jpeg" style="width:75%">
-<img src="website_images/thor_begging.jpeg" style="width:75%">
 <img src="website_images/thor_begging_again.jpeg" style="width:75%">
 <img src="website_images/tail_thor.jpeg" style="width:75%">
-<img src="website_images/thor_bed.jpeg" style="width:75%">
-<img src="website_images/he_begs_a_lot.jpeg" style="width:75%">
 <img src="website_images/sir.jpeg" style="width:75%">
 
 ## Gracie 
 
-<img src="website_images/gracie_contemplative.jpeg" style="width:75%">
 <img src="website_images/gracie_lick.png" style="width:75%">
-<img src="website_images/gracie_omg.jpeg" style="width:75%">
 <img src="website_images/gracie_snoot.jpeg" style="width:75%">
-<img src="website_images/gracie_waiting.jpeg" style="width:75%">
 
 ## Ladybug 
 
 <img src="website_images/ladybug_awaiting_pets.jpeg" style="width:75%">
-<img src="website_images/ladybug_pet_me_now.jpeg" style="width:75%">
 <img src="website_images/ladyscritch.jpeg" style="width:75%">
-<img src="website_images/ladybug_bravery.jpeg" style="width:75%">
 
 ## Gracie AND Ladybug
 
 <img src="website_images/gracie_ladybug.jpeg" style="width:75%">
-<img src="website_images/gracie_ladybug_look.jpeg" style="width:75%">
 <img src="website_images/gracie_ladybug_cute.jpeg" style="width:75%">
 <img src="website_images/gracie_ladybug_important.jpeg" style="width:75%">
-<img src="website_images/grac_lad_gouache.jpeg" style="width:75%">
 
 ## Sadie (RIP)
 
 <img src="website_images/sadie.jpeg" style="width:75%">
 <img src="website_images/sadie 2.jpeg" style="width:75%">
-<img src="website_images/sadie_flop.jpeg" style="width:75%">
 <img src="website_images/sadie_sleepy.jpeg" style="width:75%">
 
 

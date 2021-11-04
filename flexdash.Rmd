@@ -11,14 +11,27 @@ output:
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
+library(flexdashboard)
 ```
 
 ## Loading in data
 
 I am loading in my instacart data, which will be used to make a flexdashboard of various visualizations of the data. 
 
+I am cleaning the data by:
+
+- using `select` to only include the variables of interest: product name, aisle, department, days since prior order, reordered, order id
+
 ```{r insta, message = FALSE}
 data("instacart")
+
+insta = instacart %>% 
+  select()  %>% 
+  filter(aisle %in% c("baking ingredients", "dog food care", "packaged vegetables fruits")) %>%
+  group_by(aisle) %>% 
+  count(product_name) %>% 
+  mutate(rank = min_rank(desc(n))) %>% 
+  arrange(desc(n)) 
 ```
 
 ## 

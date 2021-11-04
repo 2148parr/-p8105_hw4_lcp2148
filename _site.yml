@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "Home"
   left:
-    - text: "Instacart Plots"
+    - text: "Instacart Flexdashboard"
       href: flexdash.html
     - text: "Resume"
       href: resume.html
