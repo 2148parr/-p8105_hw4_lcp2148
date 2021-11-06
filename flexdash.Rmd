@@ -1,5 +1,5 @@
 ---
-title: "Instacart Flexdashboard: Reordered Items in the Deli Aisle Among Recent Reorderers"
+title: "Instacart Flexdashboard: Reordered Items in the Deli Department Among Recent Reorderers"
 output:   
   flexdashboard::flex_dashboard:
     orientation: columns
