@@ -21,7 +21,7 @@ I am loading in my instacart data, which will be used to make a flexdashboard of
 I am cleaning the data by:
 
 - using `select` to only include the variables of interest: product name, aisle, department, days since prior order, if the item was reordered, order hour of day, and order id
-- filtering to only reordered items, those in the deli department, and orders within 2 weeks of the last order
+- filtering to only reordered items, those in the deli department, and orders within 3 weeks of the last order
 
 ```{r insta, message = FALSE}
 data("instacart")
@@ -30,7 +30,7 @@ insta = instacart %>%
   select(product_name, aisle, department, days_since_prior_order, reordered, order_hour_of_day, order_id)  %>% 
   filter(reordered == 1,
          department ==  "deli",
-         days_since_prior_order < 15)  
+         days_since_prior_order < 22)  
 ```
 
 ## Bar plot 
