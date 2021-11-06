@@ -1,5 +1,5 @@
 ---
-title: "Instacart Flexdashboard"
+title: "Instacart Flexdashboard: Reordered Items in the Deli Aisle Among Recent Reorderers"
 output:   
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -49,7 +49,7 @@ insta %>%
          yaxis = list(title = "Numer ordered"), 
          title = "Most popular recently reordered deli department items",  
          titlefont = list(size = 16),
-         legend = list(x = 0.1, y = 0.95))
+         showlegend = FALSE)
 
 ```
 
