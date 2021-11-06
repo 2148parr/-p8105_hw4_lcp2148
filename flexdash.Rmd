@@ -1,29 +1,28 @@
 ---
 title: "flexdash"
 output:   
-  html_document:
-    code_folding: hide
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
 ---
 
-```{r setup, message = FALSE, warning = FALSE}
+```{r setup, message = FALSE, warning = FALSE, include = FALSE}
 library(tidyverse)
 library(p8105.datasets)
 library(plotly)
 library(flexdashboard)
 ```
 
-## Loading in data
 
-I am loading in my instacart data, which will be used to make a flexdashboard of various visualizations of the data. 
+```{r insta, message = FALSE, include = FALSE}
+##Here,  I'm loading in my instacart data, which will be used to make a flexdashboard of various visualizations of the data. 
 
-I am cleaning the data by:
+##I then clean the data by:
 
-- using `select` to only include the variables of interest: product name, aisle, department, days since prior order, if the item was reordered, order hour of day, and order id
-- filtering to only reordered items, those in the deli department, and orders within 3 weeks of the last order
+##- using `select` to only include the variables of interest: product name, aisle, department, days since prior order, if the item was reordered, order hour of day, and order id
+##- filtering to only reordered items, those in the deli department, and orders within 3 weeks of the last order
 
-```{r insta, message = FALSE}
 data("instacart")
 
 insta = instacart %>% 
@@ -32,10 +31,11 @@ insta = instacart %>%
          department ==  "deli",
          days_since_prior_order < 22)  
 ```
+ 
+Column {data-width=650}
+-----------------------------------------------------------------------
 
-## Bar plot 
-
-This graph shows the most popular recently reordered products from the deli department. 
+### Bar plot
 
 ```{r bar_plot}
 
@@ -43,25 +43,33 @@ insta %>%
   count(product_name) %>% 
   filter(n > 100) %>% 
   mutate(product_name =  fct_reorder(product_name, n)) %>% 
-  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis")
+  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis") %>% 
+  layout(plot_bgcolor = "f8f8f8",
+         xaxis = list(title = "Product name"), 
+         yaxis = list(title = "Numer ordered"), 
+         title = "Most popular recently reordered deli department items")
 
 ```
 
-## Scatter plot 
+Column {data-width=350}
+-----------------------------------------------------------------------
 
-This plot shows the relationship between days since prior order and order hour of day for the deli department.
+###Scatter plot 
 
 ```{r scatter_plot}
 
-insta %>% filter(order_id < 20000) %>% 
-  plot_ly(x = ~days_since_prior_order, y = ~order_hour_of_day, type = "scatter", mode = "markers",
-    color = ~product_name, alpha = 0.5, colors = "magma")
+insta %>% 
+  filter(order_id < 11000) %>% 
+  plot_ly(x = ~jitter(days_since_prior_order, 1), y = ~jitter(order_hour_of_day, 1), type = "scatter", mode = "markers",
+    color = ~product_name, hovertemplate = "product name:", alpha = 0.5, colors = "navy", showlegend = FALSE) %>% 
+  layout(plot_bgcolor = "fafdfe",
+         xaxis = list(title = "Days since prior order"), 
+         yaxis = list(title = "Order hour of day"), 
+         title = "Order hour and days since last order for recently reordered deli items")
 
 ```
 
-## Line plot 
-
-This plot shows the days since last order for the most recently reordered items in the lunch meat aisle. 
+### Line plot 
 
 ```{r line_plot}
 
@@ -73,8 +81,12 @@ insta_line = insta %>%
 
 insta_line %>%
   ungroup() %>%
-  plot_ly(x = ~days_since_prior_order, y = ~n, color = ~days_since_prior_order, type = "scatter", 
-          mode = "lines+markers", colors = "viridis")
+  plot_ly(x = ~days_since_prior_order, y = ~n, type = "scatter", 
+          mode = "lines+markers", colors = "magma", marker = list(color = "maroon"), line = list(color = "brown")) %>% 
+  layout(plot_bgcolor = "fffafa",
+         xaxis = list(title = "Days since prior order"), 
+         yaxis = list(title = "Number of orders"), 
+         title = "Days since last order for recently reordered items in the lunch meat aisle")
 
 ```
 
