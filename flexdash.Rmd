@@ -32,7 +32,7 @@ insta = instacart %>%
          days_since_prior_order < 22)  
 ```
  
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Bar plot
@@ -47,27 +47,14 @@ insta %>%
   layout(plot_bgcolor = "f8f8f8",
          xaxis = list(title = "Product name"), 
          yaxis = list(title = "Numer ordered"), 
-         title = "Most popular recently reordered deli department items")
+         title = "Most popular recently reordered deli department items",  
+         titlefont = list(size = 16),
+         legend = list(x = 0.1, y = 0.45))
 
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
-
-###Scatter plot 
-
-```{r scatter_plot}
-
-insta %>% 
-  filter(order_id < 11000) %>% 
-  plot_ly(x = ~jitter(days_since_prior_order, 1), y = ~jitter(order_hour_of_day, 1), type = "scatter", mode = "markers",
-    color = ~product_name, hovertemplate = "product name:", alpha = 0.5, colors = "navy", showlegend = FALSE) %>% 
-  layout(plot_bgcolor = "fafdfe",
-         xaxis = list(title = "Days since prior order"), 
-         yaxis = list(title = "Order hour of day"), 
-         title = "Order hour and days since last order for recently reordered deli items")
-
-```
 
 ### Line plot 
 
@@ -83,10 +70,27 @@ insta_line %>%
   ungroup() %>%
   plot_ly(x = ~days_since_prior_order, y = ~n, type = "scatter", 
           mode = "lines+markers", colors = "magma", marker = list(color = "maroon"), line = list(color = "brown")) %>% 
-  layout(plot_bgcolor = "fffafa",
+  layout(plot_bgcolor = "fffefa",
          xaxis = list(title = "Days since prior order"), 
          yaxis = list(title = "Number of orders"), 
-         title = "Days since last order for recently reordered items in the lunch meat aisle")
+         title = list(text = "Days since last order for recently reordered items in the lunch meat aisle"), 
+         titlefont = list(size = 12))
+
+```
+
+### Scatter plot 
+
+```{r scatter_plot}
+
+insta %>% 
+  filter(order_id < 11000) %>% 
+  plot_ly(x = ~jitter(days_since_prior_order, 1), y = ~jitter(order_hour_of_day, 1), type = "scatter", mode = "markers",
+    color = ~product_name, hovertemplate = "product name:", alpha = 0.5, colors = "navy", showlegend = FALSE) %>% 
+  layout(plot_bgcolor = "fafdfe",
+         xaxis = list(title = "Days since prior order"), 
+         yaxis = list(title = "Order hour of day"), 
+         title = "Order hour and days since last order for recently reordered deli items",  
+         titlefont = list(size = 12))
 
 ```
 
