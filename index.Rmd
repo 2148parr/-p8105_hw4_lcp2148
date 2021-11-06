@@ -30,7 +30,6 @@ I've included some important .jpegs of my doggies for your consideration.
 ## Gracie AND Ladybug
 
 <img src="website_images/gracie_ladybug.jpeg" style="width:75%">
-<img src="website_images/gracie_ladybug_cute.jpeg" style="width:75%">
 <img src="website_images/gracie_ladybug_important.jpeg" style="width:75%">
 
 ## Sadie (RIP)
