@@ -1,5 +1,5 @@
 ---
-title: "flexdash"
+title: "Instacart Flexdashboard"
 output:   
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -41,7 +41,7 @@ Column {data-width=550}
 
 insta %>%   
   count(product_name) %>% 
-  filter(n > 100) %>% 
+  filter(n > 225) %>% 
   mutate(product_name =  fct_reorder(product_name, n)) %>% 
   plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis") %>% 
   layout(plot_bgcolor = "f8f8f8",
@@ -49,7 +49,7 @@ insta %>%
          yaxis = list(title = "Numer ordered"), 
          title = "Most popular recently reordered deli department items",  
          titlefont = list(size = 16),
-         legend = list(x = 0.1, y = 0.45))
+         legend = list(x = 0.1, y = 0.95))
 
 ```
 
