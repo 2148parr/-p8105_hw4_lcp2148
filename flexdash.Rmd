@@ -20,23 +20,61 @@ I am loading in my instacart data, which will be used to make a flexdashboard of
 
 I am cleaning the data by:
 
-- using `select` to only include the variables of interest: product name, aisle, department, days since prior order, reordered, order id
+- using `select` to only include the variables of interest: product name, aisle, department, days since prior order, if the item was reordered, order hour of day, and order id
+- filtering to only reordered items, those in the deli department, and orders within 2 weeks of the last order
 
 ```{r insta, message = FALSE}
 data("instacart")
 
 insta = instacart %>% 
-  select()  %>% 
-  filter(aisle %in% c("baking ingredients", "dog food care", "packaged vegetables fruits")) %>%
-  group_by(aisle) %>% 
-  count(product_name) %>% 
-  mutate(rank = min_rank(desc(n))) %>% 
-  arrange(desc(n)) 
+  select(product_name, aisle, department, days_since_prior_order, reordered, order_hour_of_day, order_id)  %>% 
+  filter(reordered == 1,
+         department ==  "deli",
+         days_since_prior_order < 15)  
 ```
 
-## 
+## Bar plot 
 
-```{r plot}
+This graph shows the most popular recently reordered products from the deli department. 
+
+```{r bar_plot}
+
+insta %>%   
+  count(product_name) %>% 
+  filter(n > 100) %>% 
+  mutate(product_name =  fct_reorder(product_name, n)) %>% 
+  plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis")
+
+```
+
+## Scatter plot 
+
+This plot shows the relationship between days since prior order and order hour of day for the deli department.
+
+```{r scatter_plot}
+
+insta %>% filter(order_id < 20000) %>% 
+  plot_ly(x = ~days_since_prior_order, y = ~order_hour_of_day, type = "scatter", mode = "markers",
+    color = ~product_name, alpha = 0.5, colors = "magma")
+
+```
+
+## Line plot 
+
+This plot shows the days since last order for the most recently reordered items in the lunch meat aisle. 
+
+```{r line_plot}
+
+insta_line = insta %>%   
+  filter(aisle == "lunch meat") %>% 
+  count(days_since_prior_order) %>% 
+  mutate(days_since_prior_order =  as.factor(days_since_prior_order), 
+         days_since_prior_orde = fct_reorder(days_since_prior_order, n)) 
+
+insta_line %>%
+  ungroup() %>%
+  plot_ly(x = ~days_since_prior_order, y = ~n, color = ~days_since_prior_order, type = "scatter", 
+          mode = "lines+markers", colors = "viridis")
 
 ```
 
