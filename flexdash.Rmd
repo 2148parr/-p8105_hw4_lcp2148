@@ -45,7 +45,7 @@ insta %>%
   mutate(product_name =  fct_reorder(product_name, n)) %>% 
   plot_ly(x = ~product_name, y = ~n, color = ~product_name, type = "bar", colors = "viridis") %>% 
   layout(plot_bgcolor = "f8f8f8",
-         xaxis = list(title = "Product name"), 
+         xaxis = list(title = "Product name", tickfont = list(size = 11)), 
          yaxis = list(title = "Numer ordered"), 
          title = "Most popular recently reordered deli department items",  
          titlefont = list(size = 16),
@@ -60,45 +60,44 @@ Column {data-width=450}
 
 ```{r line_plot}
 
+## I had to format the names oddly so I could fit my key without covering plot
+
 insta_line_a = insta %>%   
   filter(aisle == "lunch meat") %>% 
   count(days_since_prior_order)  %>%
   ungroup() %>%
-  plot_ly(x = ~days_since_prior_order, y = ~n, name = "Lunch meat", type = "scatter", 
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = "Lunch 
+meat", type = "scatter", 
           mode = "lines+markers", marker = list(color = "778a35"), 
           line = list(color = "778a35", width = 4)) %>% 
-  layout(plot_bgcolor = "fffefa",
-         xaxis = list(title = "Days since prior order"), 
-         yaxis = list(title = "Number of orders")) 
+  layout(plot_bgcolor = "fffefa") 
 
 insta_line_b = insta %>%   
   filter(aisle == "prepared meals") %>% 
   count(days_since_prior_order)  %>%
   ungroup() %>%
-  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Prepared meals', type = "scatter", 
-          mode = "lines+markers", marker = list(color = "gold"), line = list(color = "gold", width = 4))  %>% 
-  layout(plot_bgcolor = "fffefa",
-         xaxis = list(title = "Days since prior order"), 
-         yaxis = list(title = "Number of orders")) 
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Prepared 
+meals', type = "scatter", 
+          mode = "lines+markers", marker = list(color = "gold"), 
+          line = list(color = "gold", width = 4))  %>% 
+  layout(plot_bgcolor = "fffefa") 
 
 insta_line_c = insta %>%   
   filter(aisle == "fresh dips tapenades") %>% 
   count(days_since_prior_order)  %>%
   ungroup() %>%
-  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Fresh dips and tapenades', type = "scatter", 
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Fresh 
+dips &
+tapenades', type = "scatter", 
           mode = "lines+markers", marker = list(color = "a7a6ba"), line = list(color = "a7a6ba", width = 4)) %>% 
-  layout(plot_bgcolor = "fffefa",
-         xaxis = list(title = "Days since prior order"), 
-         yaxis = list(title = "Number of orders")) 
+  layout(plot_bgcolor = "fffefa") 
 
 insta_line = subplot(insta_line_b, insta_line_a, insta_line_c, nrows = 3) %>%
   layout(xaxis3 = list(title = "Days since prior order"), 
-         yaxis = list(title = "# orders"),
          yaxis2 = list(title = "# orders"),
-         yaxis3 = list(title = "# orders"),
          title = list(text = "Days since last order for recently reordered items in three aisles"), 
          titlefont = list(size = 14),
-         legend = list(x = .70, y = 1, font = list(size = 8)))
+         legend = list(font = list(size = 10)))
 
 insta_line 
 
@@ -111,8 +110,8 @@ insta_line
 insta %>% 
   filter(order_id < 11000) %>% 
   plot_ly(x = ~jitter(days_since_prior_order, 1), y = ~jitter(order_hour_of_day, 1), type = "scatter", mode = "markers",
-    color = ~product_name, hovertemplate = "product name:", alpha = 0.5, colors = "navy", showlegend = FALSE) %>% 
-  layout(plot_bgcolor = "fafdfe",
+    color = ~product_name, hovertemplate = ~product_name, alpha = 0.5, colors = "#feffee", showlegend = FALSE) %>% 
+  layout(plot_bgcolor = "333366",
          xaxis = list(title = "Days since prior order"), 
          yaxis = list(title = "Order hour of day"), 
          title = "Order hour and days since last order for recent deli reorders",  
