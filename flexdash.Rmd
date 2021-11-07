@@ -65,8 +65,8 @@ insta_line_a = insta %>%
   count(days_since_prior_order)  %>%
   ungroup() %>%
   plot_ly(x = ~days_since_prior_order, y = ~n, name = "Lunch meat", type = "scatter", 
-          mode = "lines+markers", marker = list(color = "c3d6c8"), 
-          line = list(color = "c3d6c8", width = 4)) %>% 
+          mode = "lines+markers", marker = list(color = "778a35"), 
+          line = list(color = "778a35", width = 4)) %>% 
   layout(plot_bgcolor = "fffefa",
          xaxis = list(title = "Days since prior order"), 
          yaxis = list(title = "Number of orders")) 
@@ -98,7 +98,7 @@ insta_line = subplot(insta_line_b, insta_line_a, insta_line_c, nrows = 3) %>%
          yaxis3 = list(title = "# orders"),
          title = list(text = "Days since last order for recently reordered items in three aisles"), 
          titlefont = list(size = 14),
-         legend = list(x = 0.70, y = 0.98)) 
+         legend = list(x = 1, y = 0.98)) 
 
 insta_line 
 
