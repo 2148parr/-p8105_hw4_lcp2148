@@ -98,10 +98,9 @@ insta_line = subplot(insta_line_b, insta_line_a, insta_line_c, nrows = 3) %>%
          yaxis3 = list(title = "# orders"),
          title = list(text = "Days since last order for recently reordered items in three aisles"), 
          titlefont = list(size = 14),
-         legend = list(orientation = 'h', yanchor = "bottom"))
+         legend = list(x = .70, y = 1, font = list(size = 8)))
 
 insta_line 
-
 
 ```
 
