@@ -1,5 +1,5 @@
 ---
-title: "Instacart Flexdashboard: Reordered Items in the Deli Department Among Recent Reorderers"
+title: "Instacart Flexdashboard: Recently Reordered Items in the Deli Department"
 output:   
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -60,21 +60,48 @@ Column {data-width=450}
 
 ```{r line_plot}
 
-insta_line = insta %>%   
+insta_line_a = insta %>%   
   filter(aisle == "lunch meat") %>% 
-  count(days_since_prior_order) %>% 
-  mutate(days_since_prior_order =  as.factor(days_since_prior_order), 
-         days_since_prior_orde = fct_reorder(days_since_prior_order, n)) 
-
-insta_line %>%
+  count(days_since_prior_order)  %>%
   ungroup() %>%
-  plot_ly(x = ~days_since_prior_order, y = ~n, type = "scatter", 
-          mode = "lines+markers", colors = "magma", marker = list(color = "maroon"), line = list(color = "brown")) %>% 
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = "Lunch meat", type = "scatter", 
+          mode = "lines+markers", marker = list(color = "c3d6c8"), 
+          line = list(color = "c3d6c8", width = 4)) %>% 
   layout(plot_bgcolor = "fffefa",
          xaxis = list(title = "Days since prior order"), 
-         yaxis = list(title = "Number of orders"), 
-         title = list(text = "Days since last order for recently reordered items in the lunch meat aisle"), 
-         titlefont = list(size = 12))
+         yaxis = list(title = "Number of orders")) 
+
+insta_line_b = insta %>%   
+  filter(aisle == "prepared meals") %>% 
+  count(days_since_prior_order)  %>%
+  ungroup() %>%
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Prepared meals', type = "scatter", 
+          mode = "lines+markers", marker = list(color = "gold"), line = list(color = "gold", width = 4))  %>% 
+  layout(plot_bgcolor = "fffefa",
+         xaxis = list(title = "Days since prior order"), 
+         yaxis = list(title = "Number of orders")) 
+
+insta_line_c = insta %>%   
+  filter(aisle == "fresh dips tapenades") %>% 
+  count(days_since_prior_order)  %>%
+  ungroup() %>%
+  plot_ly(x = ~days_since_prior_order, y = ~n, name = 'Fresh dips and tapenades', type = "scatter", 
+          mode = "lines+markers", marker = list(color = "a7a6ba"), line = list(color = "a7a6ba", width = 4)) %>% 
+  layout(plot_bgcolor = "fffefa",
+         xaxis = list(title = "Days since prior order"), 
+         yaxis = list(title = "Number of orders")) 
+
+insta_line = subplot(insta_line_b, insta_line_a, insta_line_c, nrows = 3) %>%
+  layout(xaxis3 = list(title = "Days since prior order"), 
+         yaxis = list(title = "# orders"),
+         yaxis2 = list(title = "# orders"),
+         yaxis3 = list(title = "# orders"),
+         title = list(text = "Days since last order for recently reordered items in three aisles"), 
+         titlefont = list(size = 14),
+         legend = list(x = 0.70, y = 0.98)) 
+
+insta_line 
+
 
 ```
 
@@ -89,8 +116,8 @@ insta %>%
   layout(plot_bgcolor = "fafdfe",
          xaxis = list(title = "Days since prior order"), 
          yaxis = list(title = "Order hour of day"), 
-         title = "Order hour and days since last order for recently reordered deli items",  
-         titlefont = list(size = 12))
+         title = "Order hour and days since last order for recent deli reorders",  
+         titlefont = list(size = 14))
 
 ```
 
